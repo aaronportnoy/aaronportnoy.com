@@ -14,7 +14,9 @@
   .mp h3 {margin:0 0 0 4ex}
   .mp dt {margin:0;clear:left}
   .mp dt.flush {float:left;width:8ex}
+  .mp dt.cve {float:left;width:20ex}
   .mp dd {margin:0 0 0 9ex}
+  .mp dd.cve {margin:0 0 0 21ex}
   .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
   .mp pre {margin-bottom:20px}
   .mp pre+h2,.mp pre+h3 {margin-top:22px}
@@ -297,113 +299,112 @@ This page serves as a minimalist reference to his work and interests.</p>
 
 <h2 id="VULNERABILITIES">VULNERABILITIES</h2>
 
-<ul>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41153">CVE-2026-41153</a></code> — JetBrains Junie: command injection via malicious project file enabling unsafe command execution (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0612">CVE-2026-0612</a></code> — The Librarian: information leakage via web_fetch tool in AI assistant (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0613">CVE-2026-0613</a></code> — The Librarian: internal port scanning via AI assistant (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0615">CVE-2026-0615</a></code> — The Librarian: unauthorized access to supervisord status page via AI assistant (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0616">CVE-2026-0616</a></code> — The Librarian: unauthorized access to Adminer database interface via AI assistant (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68432">CVE-2025-68432</a></code> — Zed IDE: arbitrary code execution via malicious LSP binary configuration in .zed/settings.json (Mindgard, 2025)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68433">CVE-2025-68433</a></code> — Zed IDE: command injection via MCP configuration (Mindgard, 2025)</li>
-  <li><code><a href="https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/318">Eclipse Theia MCP</a></code> — MCP configuration vulnerability in Eclipse Theia IDE (Mindgard, 2025)</li>
-  <li><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code> — DNS-based data exfiltration via prompt injection in source file docstrings, coercing reads of .env files and exfiltrating secrets via DNS queries; no CVE assigned (Mindgard, 2025)</li>
-  <li><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code> — arbitrary code execution via prompt injection in .clinerules config file, bypassing user approval dialogs; no CVE assigned (Mindgard, 2025)</li>
-  <li><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code> — TOCTOU race condition via sequential prompt injection enabling arbitrary code execution across separate interaction windows; no CVE assigned (Mindgard, 2025)</li>
-  <li><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code> — model identity disclosure via error messages revealing underlying AI model; no CVE assigned (Mindgard, 2025)</li>
-  <li><code><a href="https://mindgard.ai/blog/when-configuration-becomes-code-the-hidden-execution-layer-in-ai-development-tools">Aider</a></code> — zero-click arbitrary command execution via malicious .aider.conf.yml loading an external command file with user prompts suppressed; no CVE assigned or pursued (Mindgard, 2026)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21554">CVE-2023-21554</a></code> — Microsoft MSMQ QueueJumper: unauthenticated RCE via malformed MSMQ packets; w/ Valentina Palmiotti, Fabius Watson (Randori/IBM, 2023)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3064">CVE-2021-3064</a></code> — Palo Alto GlobalProtect: stack-based buffer overflow enabling unauthenticated RCE in portal and gateway interfaces; Randori Attack Team (Randori, 2021)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-13997">CVE-2017-13997</a></code> — Schneider Electric InduSoft Web Studio / InTouch Machine Edition: missing authentication enabling arbitrary command execution, CVSS 9.8 (Exodus Intelligence, 2017)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-14024">CVE-2017-14024</a></code> — Schneider Electric InduSoft Web Studio / InTouch Machine Edition: stack-based buffer overflow enabling RCE, CVSS 9.8 (Exodus Intelligence, 2017)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-8022">CVE-2017-8022</a></code> — EMC NetWorker: buffer overflow in nsrd service enabling unauthenticated RCE (Exodus Intelligence, 2017)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2013-0657">CVE-2013-0657</a></code> — Schneider Electric IGSS: stack-based buffer overflow via TCP port 12397, CVSS 10.0 (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2013-0658">CVE-2013-0658</a></code> — Schneider Electric Accutech Manager: heap-based buffer overflow in RFManagerService.exe, CVSS 10.0 (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4704">CVE-2012-4704</a></code> — 3S CODESYS Gateway-Server: array index error enabling RCE (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4705">CVE-2012-4705</a></code> — 3S CODESYS Gateway-Server: directory traversal enabling arbitrary code execution (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4706">CVE-2012-4706</a></code> — 3S CODESYS Gateway-Server: integer signedness error causing heap buffer overflow (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4707">CVE-2012-4707</a></code> — 3S CODESYS Gateway-Server: out-of-bounds memory access enabling code injection (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4708">CVE-2012-4708</a></code> — 3S CODESYS Gateway-Server: stack-based buffer overflow enabling RCE (Exodus Intelligence, 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-2288">CVE-2012-2288</a></code> — EMC NetWorker: format string vulnerability in nsrd RPC service enabling RCE (Exodus Intelligence, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0121">CVE-2012-0121</a></code> — HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0 (Exodus Intelligence, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0122">CVE-2012-0122</a></code> — HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0 (Exodus Intelligence, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0123">CVE-2012-0123</a></code> — HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0 (Exodus Intelligence, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0124">CVE-2012-0124</a></code> — HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0 (Exodus Intelligence, 2012)</li>
-  <li><code><a href="https://www.oracle.com/security-alerts/cpuapr2013.html">Oracle Critical Patch Update</a></code> — multiple Oracle product vulnerabilities (Exodus Intelligence, April 2013)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-4185">CVE-2011-4185</a></code> — Novell iPrint Client: ActiveX GetPrinterURLList2 stack-based buffer overflow enabling RCE (TippingPoint DVLabs, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0774">CVE-2012-0774</a></code> — Adobe Reader X: True Type Font MINDEX table integer overflow enabling RCE (TippingPoint DVLabs, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-1182">CVE-2012-1182</a></code> — Samba: NDR PULL EVENTLOG heap overflow enabling RCE (TippingPoint DVLabs, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0549">CVE-2012-0549</a></code> — Oracle AutoVue: ActiveX SetMarkupMode enabling RCE (TippingPoint DVLabs, 2012)</li>
-  <li><code><a href="https://web.archive.org/web/20120229030438/http://dvlabs.tippingpoint.com/advisory/TPTI-12-01">TPTI-12-01</a></code> — Oracle Java: True Type Font IDEF opcode parsing enabling RCE; no CVE assigned (TippingPoint DVLabs, 2012)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0335">CVE-2011-0335</a></code> — Adobe Shockwave Player: memory buffer overflow enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0555">CVE-2011-0555</a></code> — Adobe Shockwave Player: memory buffer overflow enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0556">CVE-2011-0556</a></code> — Adobe Shockwave Player: memory buffer overflow enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0569">CVE-2011-0569</a></code> — Adobe Shockwave Player: buffer overflow in Font Xtra.x32 enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-2111">CVE-2011-2111</a></code> — Adobe Shockwave Player: buffer overflow in IML32.dll enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-2116">CVE-2011-2116</a></code> — Adobe Shockwave Player: memory corruption enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0862">CVE-2011-0862</a></code> — Oracle Java SE: ICC Profile rcs2 tag parsing enabling RCE (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://web.archive.org/web/20111002022216/http://dvlabs.tippingpoint.com/advisory/TPTI-11-13">TPTI-11-13</a></code> — McAfee SaaS: myCIOScn.dll scan method script injection enabling RCE; no CVE assigned (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://web.archive.org/web/20121111231144/http://dvlabs.tippingpoint.com/advisory/TPTI-11-15">TPTI-11-15</a></code> — Novell ZENWorks Software Packaging: ISGrid.Grid2.1 bstrSearchText parameter enabling RCE; no CVE assigned (TippingPoint DVLabs, 2011)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2866">CVE-2010-2866</a></code> — Adobe Shockwave Player: integer signedness error in DIRAPI module enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2867">CVE-2010-2867</a></code> — Adobe Shockwave Player: pointer offset vulnerability in DIRAPIX.dll enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2870">CVE-2010-2870</a></code> — Adobe Shockwave Player: heap-based buffer overflow in DIRAPIX.dll enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2874">CVE-2010-2874</a></code> — Adobe Shockwave Player: memory corruption via uninitialized pointer enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2877">CVE-2010-2877</a></code> — Adobe Shockwave Player: improper input validation in Director movie parsing enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2878">CVE-2010-2878</a></code> — Adobe Shockwave Player: improper input validation in DIRAPIX.dll enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2879">CVE-2010-2879</a></code> — Adobe Shockwave Player: integer overflow in TextXtra.x32 enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4188">CVE-2010-4188</a></code> — Adobe Shockwave Player: heap-based buffer overflow enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4189">CVE-2010-4189</a></code> — Adobe Shockwave Player: memory buffer overflow enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-3106">CVE-2010-3106</a></code> — Novell iPrint Client: ActiveX control improper input validation enabling RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-3107">CVE-2010-3107</a></code> — Novell iPrint Client: logic flaw in file deletion permissions (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4316">CVE-2010-4316</a></code> — Novell iPrint Client: browser plugin Execute Request debug parameter RCE (ZDI-CAN-858; TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4317">CVE-2010-4317</a></code> — Novell iPrint Client: browser plugin GetDriverFile uninitialized pointer RCE (ZDI-CAN-905; TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4319">CVE-2010-4319</a></code> — Novell iPrint Client: remote arbitrary file deletion (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4385">CVE-2010-4385</a></code> — RealNetworks RealPlayer: invalid frame dimensions in SIPR stream enabling RCE (TPTI-10-17, TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4390">CVE-2010-4390</a></code> — RealNetworks RealPlayer: heap buffer overflow in MDPR chunk parsing enabling RCE; w/ Logan Brown (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4294">CVE-2010-4294</a></code> — VMware Movie Decoder / Workstation / Player / Server: heap memory corruption enabling code injection (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-0034">CVE-2010-0034</a></code> — Microsoft Office PowerPoint Viewer: TextCharsAtom record code execution (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-0898">CVE-2010-0898</a></code> — Oracle Secure Backup: Scheduler Service RCE (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://web.archive.org/web/20100124074022/http://dvlabs.tippingpoint.com/advisory/TPTI-10-01">TPTI-10-01</a></code> — HP Data Protector Server Cell Manager: RCE; no CVE assigned (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://web.archive.org/web/20100613043109/http://dvlabs.tippingpoint.com/advisory/TPTI-10-03">TPTI-10-03</a></code> — Sophos Anti-Virus: SAVOnAccessFilter local privilege escalation; no CVE assigned (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://web.archive.org/web/20100816180709/http://dvlabs.tippingpoint.com/advisory/TPTI-10-05">TPTI-10-05</a></code> — Novell iPrint Client Browser Plugin: remote file deletion; no CVE assigned (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://web.archive.org/web/20100815054646/http://dvlabs.tippingpoint.com/advisory/TPTI-10-07">TPTI-10-07</a></code> — SAP Crystal Reports 2008: GIOP message size integer overflow enabling RCE; no CVE assigned (TippingPoint DVLabs, 2010)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-3846">CVE-2009-3846</a></code> — HP OpenView Network Node Manager: heap-based buffer overflow in ovlogin.exe, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4176">CVE-2009-4176</a></code> — HP OpenView Network Node Manager: heap-based buffer overflow in ovsessionmgr.exe, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4177">CVE-2009-4177</a></code> — HP OpenView Network Node Manager: buffer overflow in webappmon.exe CGI via Host header, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4178">CVE-2009-4178</a></code> — HP OpenView Network Node Manager: heap-based buffer overflow in OvWebHelp.exe via Topic parameter, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4179">CVE-2009-4179</a></code> — HP OpenView Network Node Manager: stack-based buffer overflow in ovalarm.exe via Accept-Language header, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4180">CVE-2009-4180</a></code> — HP OpenView Network Node Manager: stack-based buffer overflow in snmpviewer.exe via Host header, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4181">CVE-2009-4181</a></code> — HP OpenView Network Node Manager: heap-based buffer overflow in OvCgi/Toolbar.exe, CVSS 10.0 (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-1539">CVE-2009-1539</a></code> — Microsoft DirectShow: size validation vulnerability in QuickTime media file parsing enabling RCE (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-0909">CVE-2009-0909</a></code> — VMware Workstation / Player / ACE / Server: heap-based buffer overflow in VNnc Codec enabling RCE (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-0910">CVE-2009-0910</a></code> — VMware Workstation / Player / ACE / Server: heap-based buffer overflow in VNnc Codec (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-1544">CVE-2009-1544</a></code> — Microsoft Windows Workstation Service: NetrGetJoinInformation heap corruption enabling RCE (TippingPoint DVLabs, 2009)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-4030">CVE-2008-4030</a></code> — Microsoft Office Word: resource management error in RTF file parsing enabling RCE (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-4031">CVE-2008-4031</a></code> — Microsoft Office Word: resource management error in RTF handling enabling RCE (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-3479">CVE-2008-3479</a></code> — Microsoft MSMQ: remote code execution via malformed RPC request; w/ Cody Pierce (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-2468">CVE-2008-2468</a></code> — LANDesk Management Suite: buffer overflow in QIP Server Service enabling RCE, CVSS 10.0 (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-0027">CVE-2008-0027</a></code> — Cisco Unified CallManager: CTLProvider heap overflow enabling RCE (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-0033">CVE-2008-0033</a></code> — Apple QuickTime: IDSC atom memory corruption enabling RCE (TippingPoint DVLabs, 2008)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-6242">CVE-2007-6242</a></code> — Adobe Flash Player: improper input validation enabling code execution (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-6026">CVE-2007-6026</a></code> — Microsoft Office Access: stack-based buffer overflow in Jet Engine enabling RCE (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5082">CVE-2007-5082</a></code> — CA BrightStor ARCserve Backup HSM: RCE vulnerability; w/ Sean Larsson (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5083">CVE-2007-5083</a></code> — CA BrightStor ARCserve Backup HSM: DoS vulnerability; w/ Sean Larsson (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5084">CVE-2007-5084</a></code> — CA BrightStor ARCserve Backup HSM: RCE vulnerability; w/ Sean Larsson (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5323">CVE-2007-5323</a></code> — EMC Replistor: buffer overflow in server service enabling RCE, CVSS 10.0 (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2417">CVE-2007-2417</a></code> — Progress Software OpenEdge: heap-based buffer overflow in _mprosrv.exe, CVSS 10.0 (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2280">CVE-2007-2280</a></code> — HP OpenView Data Protector: stack-based buffer overflow in Omnilnet.exe on TCP port 5555 (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2279">CVE-2007-2279</a></code> — Symantec Storage Foundation for Windows: authentication bypass enabling arbitrary code execution (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1868">CVE-2007-1868</a></code> — IBM Tivoli Provisioning Manager for OS Deployment: multiple stack overflows in HTTP service enabling RCE (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1862">CVE-2007-1862</a></code> — Apache HTTP Server mod_mem_cache: information disclosure via improper memory handling returning previous request headers (2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1676">CVE-2007-1676</a></code> — HP OpenView Shared Trace Service: stack-based buffer overflows in ovtrcsvc.exe and OVTrace.exe via crafted requests to opcode handlers 0x1a and 0x0f (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1674">CVE-2007-1674</a></code> — LANDesk Management Suite: stack-based buffer overflow in Alert Service, CVSS 10.0 (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1070">CVE-2007-1070</a></code> — Trend Micro ServerProtect: stack overflows in StCommon.dll and eng50.dll enabling RCE (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-5820">CVE-2006-5820</a></code> — America Online SuperBuddy: ActiveX control code execution (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-0754">CVE-2007-0754</a></code> — Apple QuickTime: STSD atom heap overflow enabling RCE (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-3566">CVE-2007-3566</a></code> — Borland InterBase: ibserver.exe create-request buffer overflow enabling RCE (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-4827">CVE-2007-4827</a></code> — Automated Solutions Modbus TCP Slave: ActiveX control heap corruption (TippingPoint DVLabs, 2007)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-5782">CVE-2006-5782</a></code> — HP OpenView Client Configuration Manager: device code execution vulnerability (TippingPoint DVLabs, 2006)</li>
-  <li><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-6334">CVE-2006-6334</a></code> — Citrix Presentation Server Client: heap-based buffer overflow (TippingPoint DVLabs, 2006)</li>
-</ul>
+<dl>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41153">CVE-2026-41153</a></code></dt><dd class="cve">JetBrains Junie: command injection via malicious project file enabling unsafe command execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0612">CVE-2026-0612</a></code></dt><dd class="cve">The Librarian: information leakage via web_fetch tool in AI assistant</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0613">CVE-2026-0613</a></code></dt><dd class="cve">The Librarian: internal port scanning via AI assistant</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0615">CVE-2026-0615</a></code></dt><dd class="cve">The Librarian: unauthorized access to supervisord status page via AI assistant</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0616">CVE-2026-0616</a></code></dt><dd class="cve">The Librarian: unauthorized access to Adminer database interface via AI assistant</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68432">CVE-2025-68432</a></code></dt><dd class="cve">Zed IDE: arbitrary code execution via malicious LSP binary configuration in .zed/settings.json</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68433">CVE-2025-68433</a></code></dt><dd class="cve">Zed IDE: command injection via MCP configuration</dd>
+  <dt class="cve"><code><a href="https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/318">Eclipse Theia MCP</a></code></dt><dd class="cve">MCP configuration vulnerability in Eclipse Theia IDE</dd>
+  <dt class="cve"><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code></dt><dd class="cve">DNS-based data exfiltration via prompt injection in source file docstrings, coercing reads of .env files and exfiltrating secrets via DNS queries</dd>
+  <dt class="cve"><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code></dt><dd class="cve">arbitrary code execution via prompt injection in .clinerules config file, bypassing user approval dialogs</dd>
+  <dt class="cve"><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code></dt><dd class="cve">TOCTOU race condition via sequential prompt injection enabling arbitrary code execution across separate interaction windows</dd>
+  <dt class="cve"><code><a href="https://mindgard.ai/blog/cline-coding-agent-vulnerabilities">Cline</a></code></dt><dd class="cve">model identity disclosure via error messages revealing underlying AI model</dd>
+  <dt class="cve"><code><a href="https://mindgard.ai/blog/when-configuration-becomes-code-the-hidden-execution-layer-in-ai-development-tools">Aider</a></code></dt><dd class="cve">zero-click arbitrary command execution via malicious .aider.conf.yml loading an external command file with user prompts suppressed</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3064">CVE-2021-3064</a></code></dt><dd class="cve">Palo Alto GlobalProtect: stack-based buffer overflow enabling unauthenticated RCE in portal and gateway interfaces; Randori Attack Team</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-13997">CVE-2017-13997</a></code></dt><dd class="cve">Schneider Electric InduSoft Web Studio / InTouch Machine Edition: missing authentication enabling arbitrary command execution, CVSS 9.8</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-14024">CVE-2017-14024</a></code></dt><dd class="cve">Schneider Electric InduSoft Web Studio / InTouch Machine Edition: stack-based buffer overflow enabling RCE, CVSS 9.8</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-8022">CVE-2017-8022</a></code></dt><dd class="cve">EMC NetWorker: buffer overflow in nsrd service enabling unauthenticated RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2013-0657">CVE-2013-0657</a></code></dt><dd class="cve">Schneider Electric IGSS: stack-based buffer overflow via TCP port 12397, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2013-0658">CVE-2013-0658</a></code></dt><dd class="cve">Schneider Electric Accutech Manager: heap-based buffer overflow in RFManagerService.exe, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4704">CVE-2012-4704</a></code></dt><dd class="cve">3S CODESYS Gateway-Server: array index error enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4705">CVE-2012-4705</a></code></dt><dd class="cve">3S CODESYS Gateway-Server: directory traversal enabling arbitrary code execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4706">CVE-2012-4706</a></code></dt><dd class="cve">3S CODESYS Gateway-Server: integer signedness error causing heap buffer overflow</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4707">CVE-2012-4707</a></code></dt><dd class="cve">3S CODESYS Gateway-Server: out-of-bounds memory access enabling code injection</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-4708">CVE-2012-4708</a></code></dt><dd class="cve">3S CODESYS Gateway-Server: stack-based buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-2288">CVE-2012-2288</a></code></dt><dd class="cve">EMC NetWorker: format string vulnerability in nsrd RPC service enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0121">CVE-2012-0121</a></code></dt><dd class="cve">HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0122">CVE-2012-0122</a></code></dt><dd class="cve">HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0123">CVE-2012-0123</a></code></dt><dd class="cve">HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0124">CVE-2012-0124</a></code></dt><dd class="cve">HP Data Protector Express: unspecified vulnerability enabling RCE or DoS, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://www.oracle.com/security-alerts/cpuapr2013.html">Oracle CPU</a></code></dt><dd class="cve">multiple Oracle product vulnerabilities</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-4185">CVE-2011-4185</a></code></dt><dd class="cve">Novell iPrint Client: ActiveX GetPrinterURLList2 stack-based buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0774">CVE-2012-0774</a></code></dt><dd class="cve">Adobe Reader X: True Type Font MINDEX table integer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-1182">CVE-2012-1182</a></code></dt><dd class="cve">Samba: NDR PULL EVENTLOG heap overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2012-0549">CVE-2012-0549</a></code></dt><dd class="cve">Oracle AutoVue: ActiveX SetMarkupMode enabling RCE</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20120229030438/http://dvlabs.tippingpoint.com/advisory/TPTI-12-01">TPTI-12-01</a></code></dt><dd class="cve">Oracle Java: True Type Font IDEF opcode parsing enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0335">CVE-2011-0335</a></code></dt><dd class="cve">Adobe Shockwave Player: memory buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0555">CVE-2011-0555</a></code></dt><dd class="cve">Adobe Shockwave Player: memory buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0556">CVE-2011-0556</a></code></dt><dd class="cve">Adobe Shockwave Player: memory buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0569">CVE-2011-0569</a></code></dt><dd class="cve">Adobe Shockwave Player: buffer overflow in Font Xtra.x32 enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-2111">CVE-2011-2111</a></code></dt><dd class="cve">Adobe Shockwave Player: buffer overflow in IML32.dll enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-2116">CVE-2011-2116</a></code></dt><dd class="cve">Adobe Shockwave Player: memory corruption enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2011-0862">CVE-2011-0862</a></code></dt><dd class="cve">Oracle Java SE: ICC Profile rcs2 tag parsing enabling RCE</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20111002022216/http://dvlabs.tippingpoint.com/advisory/TPTI-11-13">TPTI-11-13</a></code></dt><dd class="cve">McAfee SaaS: myCIOScn.dll scan method script injection enabling RCE</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20121111231144/http://dvlabs.tippingpoint.com/advisory/TPTI-11-15">TPTI-11-15</a></code></dt><dd class="cve">Novell ZENWorks Software Packaging: ISGrid.Grid2.1 bstrSearchText parameter enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2866">CVE-2010-2866</a></code></dt><dd class="cve">Adobe Shockwave Player: integer signedness error in DIRAPI module enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2867">CVE-2010-2867</a></code></dt><dd class="cve">Adobe Shockwave Player: pointer offset vulnerability in DIRAPIX.dll enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2870">CVE-2010-2870</a></code></dt><dd class="cve">Adobe Shockwave Player: heap-based buffer overflow in DIRAPIX.dll enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2874">CVE-2010-2874</a></code></dt><dd class="cve">Adobe Shockwave Player: memory corruption via uninitialized pointer enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2877">CVE-2010-2877</a></code></dt><dd class="cve">Adobe Shockwave Player: improper input validation in Director movie parsing enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2878">CVE-2010-2878</a></code></dt><dd class="cve">Adobe Shockwave Player: improper input validation in DIRAPIX.dll enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-2879">CVE-2010-2879</a></code></dt><dd class="cve">Adobe Shockwave Player: integer overflow in TextXtra.x32 enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4188">CVE-2010-4188</a></code></dt><dd class="cve">Adobe Shockwave Player: heap-based buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4189">CVE-2010-4189</a></code></dt><dd class="cve">Adobe Shockwave Player: memory buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-3106">CVE-2010-3106</a></code></dt><dd class="cve">Novell iPrint Client: ActiveX control improper input validation enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-3107">CVE-2010-3107</a></code></dt><dd class="cve">Novell iPrint Client: logic flaw in file deletion permissions</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4316">CVE-2010-4316</a></code></dt><dd class="cve">Novell iPrint Client: browser plugin Execute Request debug parameter RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4317">CVE-2010-4317</a></code></dt><dd class="cve">Novell iPrint Client: browser plugin GetDriverFile uninitialized pointer RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4319">CVE-2010-4319</a></code></dt><dd class="cve">Novell iPrint Client: remote arbitrary file deletion</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4385">CVE-2010-4385</a></code></dt><dd class="cve">RealNetworks RealPlayer: invalid frame dimensions in SIPR stream enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4390">CVE-2010-4390</a></code></dt><dd class="cve">RealNetworks RealPlayer: heap buffer overflow in MDPR chunk parsing enabling RCE; w/ Logan Brown</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-4294">CVE-2010-4294</a></code></dt><dd class="cve">VMware Movie Decoder / Workstation / Player / Server: heap memory corruption enabling code injection</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-0034">CVE-2010-0034</a></code></dt><dd class="cve">Microsoft Office PowerPoint Viewer: TextCharsAtom record code execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-0898">CVE-2010-0898</a></code></dt><dd class="cve">Oracle Secure Backup: Scheduler Service RCE</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20100124074022/http://dvlabs.tippingpoint.com/advisory/TPTI-10-01">TPTI-10-01</a></code></dt><dd class="cve">HP Data Protector Server Cell Manager: RCE</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20100613043109/http://dvlabs.tippingpoint.com/advisory/TPTI-10-03">TPTI-10-03</a></code></dt><dd class="cve">Sophos Anti-Virus: SAVOnAccessFilter local privilege escalation</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20100816180709/http://dvlabs.tippingpoint.com/advisory/TPTI-10-05">TPTI-10-05</a></code></dt><dd class="cve">Novell iPrint Client Browser Plugin: remote file deletion</dd>
+  <dt class="cve"><code><a href="https://web.archive.org/web/20100815054646/http://dvlabs.tippingpoint.com/advisory/TPTI-10-07">TPTI-10-07</a></code></dt><dd class="cve">SAP Crystal Reports 2008: GIOP message size integer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-3846">CVE-2009-3846</a></code></dt><dd class="cve">HP OpenView Network Node Manager: heap-based buffer overflow in ovlogin.exe, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4176">CVE-2009-4176</a></code></dt><dd class="cve">HP OpenView Network Node Manager: heap-based buffer overflow in ovsessionmgr.exe, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4177">CVE-2009-4177</a></code></dt><dd class="cve">HP OpenView Network Node Manager: buffer overflow in webappmon.exe CGI via Host header, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4178">CVE-2009-4178</a></code></dt><dd class="cve">HP OpenView Network Node Manager: heap-based buffer overflow in OvWebHelp.exe via Topic parameter, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4179">CVE-2009-4179</a></code></dt><dd class="cve">HP OpenView Network Node Manager: stack-based buffer overflow in ovalarm.exe via Accept-Language header, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4180">CVE-2009-4180</a></code></dt><dd class="cve">HP OpenView Network Node Manager: stack-based buffer overflow in snmpviewer.exe via Host header, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-4181">CVE-2009-4181</a></code></dt><dd class="cve">HP OpenView Network Node Manager: heap-based buffer overflow in OvCgi/Toolbar.exe, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-1539">CVE-2009-1539</a></code></dt><dd class="cve">Microsoft DirectShow: size validation vulnerability in QuickTime media file parsing enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-0909">CVE-2009-0909</a></code></dt><dd class="cve">VMware Workstation / Player / ACE / Server: heap-based buffer overflow in VNnc Codec enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-0910">CVE-2009-0910</a></code></dt><dd class="cve">VMware Workstation / Player / ACE / Server: heap-based buffer overflow in VNnc Codec</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2009-1544">CVE-2009-1544</a></code></dt><dd class="cve">Microsoft Windows Workstation Service: NetrGetJoinInformation heap corruption enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-4030">CVE-2008-4030</a></code></dt><dd class="cve">Microsoft Office Word: resource management error in RTF file parsing enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-4031">CVE-2008-4031</a></code></dt><dd class="cve">Microsoft Office Word: resource management error in RTF handling enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-3479">CVE-2008-3479</a></code></dt><dd class="cve">Microsoft MSMQ: remote code execution via malformed RPC request; w/ Cody Pierce</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-2468">CVE-2008-2468</a></code></dt><dd class="cve">LANDesk Management Suite: buffer overflow in QIP Server Service enabling RCE, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-0027">CVE-2008-0027</a></code></dt><dd class="cve">Cisco Unified CallManager: CTLProvider heap overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2008-0033">CVE-2008-0033</a></code></dt><dd class="cve">Apple QuickTime: IDSC atom memory corruption enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-6242">CVE-2007-6242</a></code></dt><dd class="cve">Adobe Flash Player: improper input validation enabling code execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-6026">CVE-2007-6026</a></code></dt><dd class="cve">Microsoft Office Access: stack-based buffer overflow in Jet Engine enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5082">CVE-2007-5082</a></code></dt><dd class="cve">CA BrightStor ARCserve Backup HSM: RCE vulnerability; w/ Sean Larsson</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5083">CVE-2007-5083</a></code></dt><dd class="cve">CA BrightStor ARCserve Backup HSM: DoS vulnerability; w/ Sean Larsson</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5084">CVE-2007-5084</a></code></dt><dd class="cve">CA BrightStor ARCserve Backup HSM: RCE vulnerability; w/ Sean Larsson</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-5323">CVE-2007-5323</a></code></dt><dd class="cve">EMC Replistor: buffer overflow in server service enabling RCE, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2417">CVE-2007-2417</a></code></dt><dd class="cve">Progress Software OpenEdge: heap-based buffer overflow in _mprosrv.exe, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2280">CVE-2007-2280</a></code></dt><dd class="cve">HP OpenView Data Protector: stack-based buffer overflow in Omnilnet.exe on TCP port 5555</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-2279">CVE-2007-2279</a></code></dt><dd class="cve">Symantec Storage Foundation for Windows: authentication bypass enabling arbitrary code execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1868">CVE-2007-1868</a></code></dt><dd class="cve">IBM Tivoli Provisioning Manager for OS Deployment: multiple stack overflows in HTTP service enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1862">CVE-2007-1862</a></code></dt><dd class="cve">Apache HTTP Server mod_mem_cache: information disclosure via improper memory handling returning previous request headers</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1676">CVE-2007-1676</a></code></dt><dd class="cve">HP OpenView Shared Trace Service: stack-based buffer overflows in ovtrcsvc.exe and OVTrace.exe via crafted requests to opcode handlers 0x1a and 0x0f</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1674">CVE-2007-1674</a></code></dt><dd class="cve">LANDesk Management Suite: stack-based buffer overflow in Alert Service, CVSS 10.0</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-1070">CVE-2007-1070</a></code></dt><dd class="cve">Trend Micro ServerProtect: stack overflows in StCommon.dll and eng50.dll enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-5820">CVE-2006-5820</a></code></dt><dd class="cve">America Online SuperBuddy: ActiveX control code execution</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-0754">CVE-2007-0754</a></code></dt><dd class="cve">Apple QuickTime: STSD atom heap overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-3566">CVE-2007-3566</a></code></dt><dd class="cve">Borland InterBase: ibserver.exe create-request buffer overflow enabling RCE</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2007-4827">CVE-2007-4827</a></code></dt><dd class="cve">Automated Solutions Modbus TCP Slave: ActiveX control heap corruption</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-5782">CVE-2006-5782</a></code></dt><dd class="cve">HP OpenView Client Configuration Manager: device code execution vulnerability</dd>
+  <dt class="cve"><code><a href="https://nvd.nist.gov/vuln/detail/CVE-2006-6334">CVE-2006-6334</a></code></dt><dd class="cve">Citrix Presentation Server Client: heap-based buffer overflow</dd>
+</dl>
 
 <h2 id="HISTORY">HISTORY</h2>
 
